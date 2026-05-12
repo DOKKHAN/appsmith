@@ -1,0 +1,1 @@
+SELECT * FROM {{appsmith.store.tenant_schema || 'public'}}.proyectos;

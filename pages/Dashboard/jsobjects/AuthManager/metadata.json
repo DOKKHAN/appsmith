@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "69b8602109cfa130e9690df8_f2fbd8a0-7664-46ef-8251-a062e3bd6fea",
+  "id": "Dashboard_AuthManager",
+  "unpublishedCollection": {
+    "name": "AuthManager",
+    "pageId": "Dashboard",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}
