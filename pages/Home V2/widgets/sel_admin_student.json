@@ -30,7 +30,7 @@
   "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
-  "isVisible": "{{(appsmith.store.homeV2View || 'admin') === 'admin'}}",
+  "isVisible": "{{appsmith.store.homeV2View === 'admin'}}",
   "key": "k7043ce76c1",
   "labelAlignment": "left",
   "labelPosition": "Top",

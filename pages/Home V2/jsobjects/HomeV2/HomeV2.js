@@ -1,7 +1,7 @@
 export default {
   async init() {
     if (!appsmith.store.homeV2View) {
-      await storeValue('homeV2View', 'admin');
+      await storeValue('homeV2View', 'dashboard');
     }
     await this.refreshCurrentView();
   },
@@ -11,8 +11,9 @@ export default {
     await this.refreshCurrentView(view);
   },
 
-  async refreshCurrentView(view = appsmith.store.homeV2View || 'admin') {
+  async refreshCurrentView(view = appsmith.store.homeV2View || 'dashboard') {
     try {
+      if (view === 'dashboard') return;
       if (view === 'admin') {
         await Promise.all([get_students_lookup.run(), get_active_students.run()]);
       }

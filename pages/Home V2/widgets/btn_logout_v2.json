@@ -12,6 +12,9 @@
     },
     {
       "key": "buttonColor"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [
@@ -24,7 +27,7 @@
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{appsmith.store.homeV2View !== 'dashboard'}}",
   "key": "kbb53f8b18c",
   "leftColumn": 1,
   "minWidth": 120,

@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 21,
+  "bottomRow": 26,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonVariant": "PRIMARY",
@@ -12,6 +12,9 @@
     },
     {
       "key": "buttonColor"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [
@@ -24,7 +27,7 @@
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{appsmith.store.homeV2View !== 'dashboard'}}",
   "key": "k6bc5370acc",
   "leftColumn": 1,
   "minWidth": 120,
@@ -40,7 +43,7 @@
   "responsiveBehavior": "hug",
   "rightColumn": 13,
   "text": "Rutinas",
-  "topRow": 17,
+  "topRow": 22,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "w3c84bf8324",

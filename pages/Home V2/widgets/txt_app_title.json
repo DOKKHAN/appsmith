@@ -19,7 +19,7 @@
   "fontSize": "1.25rem",
   "fontStyle": "BOLD",
   "isLoading": false,
-  "isVisible": "{{true}}",
+  "isVisible": "{{appsmith.store.homeV2View !== 'dashboard'}}",
   "key": "k12ac7a5002",
   "leftColumn": 1,
   "maxDynamicHeight": 9000,
