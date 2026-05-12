@@ -74,6 +74,54 @@
     },
     {
       "key": "isVisible"
+    },
+    {
+      "key": "primaryColumns.nombre_completo.computedValue"
+    },
+    {
+      "key": "primaryColumns.rut.computedValue"
+    },
+    {
+      "key": "primaryColumns.nombre_macro.computedValue"
+    },
+    {
+      "key": "primaryColumns.fase_tipo.computedValue"
+    },
+    {
+      "key": "primaryColumns.semana_meso.computedValue"
+    },
+    {
+      "key": "primaryColumns.dia_numero.computedValue"
+    },
+    {
+      "key": "primaryColumns.dia_tipo.computedValue"
+    },
+    {
+      "key": "primaryColumns.orden.computedValue"
+    },
+    {
+      "key": "primaryColumns.ejercicio.computedValue"
+    },
+    {
+      "key": "primaryColumns.objetivo_muscular.computedValue"
+    },
+    {
+      "key": "primaryColumns.series.computedValue"
+    },
+    {
+      "key": "primaryColumns.repeticiones.computedValue"
+    },
+    {
+      "key": "primaryColumns.rir_objetivo.computedValue"
+    },
+    {
+      "key": "primaryColumns.peso_kg.computedValue"
+    },
+    {
+      "key": "primaryColumns.tempo.computedValue"
+    },
+    {
+      "key": "primaryColumns.descanso_seg.computedValue"
     }
   ],
   "dynamicPropertyPathList": [

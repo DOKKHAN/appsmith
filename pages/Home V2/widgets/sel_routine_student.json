@@ -57,7 +57,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 44,
   "serverSideFiltering": false,
-  "sourceData": "{{get_students_lookup.data}}",
+  "sourceData": "{{(get_students_lookup.data || []).map((a) => ({ label: a.label || ((a.nombre_completo || 'Sin nombre') + ' (' + (a.rut || 'Sin RUT') + ')'), value: a.value || a.id_alumno }))}}",
   "topRow": 6,
   "type": "SELECT_WIDGET",
   "version": 1,

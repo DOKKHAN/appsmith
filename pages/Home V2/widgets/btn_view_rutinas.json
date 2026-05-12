@@ -29,7 +29,7 @@
   "leftColumn": 1,
   "minWidth": 120,
   "needsErrorInfo": false,
-  "onClick": "{{storeValue('homeV2View', 'rutinas');}}",
+  "onClick": "{{HomeV2.switchView('rutinas');}}",
   "parentColumnSpace": 16,
   "parentId": "0",
   "parentRowSpace": 10,

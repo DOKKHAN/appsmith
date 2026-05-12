@@ -61,6 +61,15 @@
     },
     {
       "key": "isVisible"
+    },
+    {
+      "key": "primaryColumns.id_sesion.computedValue"
+    },
+    {
+      "key": "primaryColumns.id_alumno.computedValue"
+    },
+    {
+      "key": "primaryColumns.fecha.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
