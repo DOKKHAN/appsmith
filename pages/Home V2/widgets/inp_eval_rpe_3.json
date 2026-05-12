@@ -1,0 +1,55 @@
+{
+  "animateLoading": true,
+  "bottomRow": 56,
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isLoading": false,
+  "isVisible": "{{appsmith.store.homeV2View === 'evaluaciones'}}",
+  "key": "k5900f7b545",
+  "leftColumn": 52,
+  "minWidth": 450,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 16,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 57,
+  "topRow": 49,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "w164529bae9",
+  "widgetName": "inp_eval_rpe_3",
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "autoFocus": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "boxShadow": "none",
+  "defaultText": "",
+  "dynamicHeight": "FIXED",
+  "iconAlign": "left",
+  "inputType": "NUMBER",
+  "isDisabled": false,
+  "isRequired": false,
+  "label": "RPE",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "placeholderText": "",
+  "resetOnSubmit": false,
+  "shouldAllowAutofill": false,
+  "showStepArrows": false
+}

@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "69b8602109cfa130e9690df8_efd8bed6-de9e-45bd-83ba-20eeec3b7efb",
-  "id": "Home V2_get_evaluation_sessions",
+  "gitSyncId": "69b8602109cfa130e9690df8_b8f1b750-a9f7-4c16-b326-f65a42ea05e6",
+  "id": "Home V2_create_eval_session_v2",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT *\nFROM adt.evaluaciones_sesion\nORDER BY fecha DESC, id_sesion DESC;",
+      "body": "INSERT INTO adt.evaluaciones_sesion (id_alumno, fecha)\nVALUES ({{sel_eval_student.selectedOptionValue}}, CURRENT_DATE)\nRETURNING id_sesion;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,10 +22,14 @@
       "name": "MIZEN Data",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
-    "name": "get_evaluation_sessions",
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
+    "name": "create_eval_session_v2",
     "pageId": "Home V2",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }
