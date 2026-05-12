@@ -105,7 +105,7 @@ export default {
     return this.validEvaluationRows().map((row) => ({
       id_sesion: Number(idSesion),
       id_ejercicio: Number(row.id_ejercicio),
-      punto_evaluado: row.label ? ''' + this.escapeSql(row.label) + ''' : 'NULL',
+      punto_evaluado: row.label ? "'" + this.escapeSql(row.label) + "'" : 'NULL',
       peso_manejado: Number(row.peso || 0),
       reps_logradas: Number(row.reps || 0),
       rpe_observado: Number(row.rpe || 0),
