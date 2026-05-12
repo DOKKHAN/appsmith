@@ -24,5 +24,5 @@ SELECT
     NULL as comentario_log
 FROM adt.bloques_ejercicios b
 JOIN adt.ejercicios e ON b.id_ejercicio = e.id_ejercicio
-WHERE b.id_mesociclo = {{get_current_routine.data[0].id_mesociclo}}
+WHERE b.id_mesociclo = {{get_current_routine.data?.[0]?.id_mesociclo || 0}}
 ORDER BY b.orden ASC;

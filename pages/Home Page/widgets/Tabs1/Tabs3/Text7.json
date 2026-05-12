@@ -43,7 +43,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 63,
   "shouldTruncate": false,
-  "text": "{{get_current_routine.data[0].nombre_plan || \"Sin rutina activa\"}} - Activo desde: {{moment(get_current_routine.data[0].fecha_inicio).format(\"DD/MM/YYYY\") || \"--/--/--\"}}",
+  "text": "{{get_current_routine.data?.[0]?.nombre_plan || \"Sin rutina activa\"}} - Activo desde: {{get_current_routine.data?.[0]?.fecha_inicio ? moment(get_current_routine.data[0].fecha_inicio).format(\"DD/MM/YYYY\") : \"--/--/--\"}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 7,
