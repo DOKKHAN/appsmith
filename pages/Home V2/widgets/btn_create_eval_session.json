@@ -28,7 +28,7 @@
   "iconAlign": "left",
   "iconName": "",
   "isDefaultClickDisabled": true,
-  "isDisabled": "{{!sel_new_eval_student.selectedOptionValue}}",
+  "isDisabled": "{{!sel_new_eval_student.selectedOptionValue || sel_new_eval_student.selectedOptionValue === '__empty__'}}",
   "isLoading": false,
   "isVisible": "{{appsmith.store.homeV2View === 'nueva_evaluacion'}}",
   "key": "k8500459d8e",

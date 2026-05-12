@@ -197,7 +197,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 63,
   "searchKey": "",
-  "tableData": "{{sel_new_eval_student.selectedOptionValue ? get_evaluation_sessions.data.filter((s) => s.id_alumno == sel_new_eval_student.selectedOptionValue) : get_evaluation_sessions.data}}",
+  "tableData": "{{sel_new_eval_student.selectedOptionValue && sel_new_eval_student.selectedOptionValue !== '__empty__' ? get_evaluation_sessions.data.filter((s) => s.id_alumno == sel_new_eval_student.selectedOptionValue) : get_evaluation_sessions.data}}",
   "textSize": "0.875rem",
   "topRow": 14,
   "totalRecordsCount": 0,

@@ -28,7 +28,7 @@
   "iconAlign": "left",
   "iconName": "",
   "isDefaultClickDisabled": true,
-  "isDisabled": "{{!sel_admin_student.selectedOptionValue}}",
+  "isDisabled": "{{!sel_admin_student.selectedOptionValue || sel_admin_student.selectedOptionValue === '__empty__'}}",
   "isLoading": false,
   "isVisible": "{{(appsmith.store.homeV2View || 'admin') === 'admin'}}",
   "key": "kf40491f9fe",

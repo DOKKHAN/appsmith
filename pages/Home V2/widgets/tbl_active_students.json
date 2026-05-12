@@ -372,7 +372,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 63,
   "searchKey": "",
-  "tableData": "{{sel_admin_student.selectedOptionValue ? get_active_students.data.filter((a) => a.id_alumno == sel_admin_student.selectedOptionValue) : get_active_students.data}}",
+  "tableData": "{{sel_admin_student.selectedOptionValue && sel_admin_student.selectedOptionValue !== '__empty__' ? get_active_students.data.filter((a) => a.id_alumno == sel_admin_student.selectedOptionValue) : get_active_students.data}}",
   "textSize": "0.875rem",
   "topRow": 14,
   "totalRecordsCount": 0,

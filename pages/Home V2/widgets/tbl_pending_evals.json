@@ -372,7 +372,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 63,
   "searchKey": "",
-  "tableData": "{{sel_eval_student.selectedOptionValue ? get_pending_initial_evaluations.data.filter((a) => a.id_alumno == sel_eval_student.selectedOptionValue) : get_pending_initial_evaluations.data}}",
+  "tableData": "{{sel_eval_student.selectedOptionValue && sel_eval_student.selectedOptionValue !== '__empty__' ? get_pending_initial_evaluations.data.filter((a) => a.id_alumno == sel_eval_student.selectedOptionValue) : get_pending_initial_evaluations.data}}",
   "textSize": "0.875rem",
   "topRow": 31,
   "totalRecordsCount": 0,
