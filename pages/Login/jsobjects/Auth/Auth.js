@@ -19,10 +19,11 @@ export default {
                 await storeValue("user_role", user.rol);
                 
                 // IMPORTANTE: Inicializar la pestaña para que el Sidebar funcione
-                await storeValue("selectedTab", "Inicio"); 
+                await storeValue("selectedTab", "Inicio");
+                await storeValue("homeV2View", "admin");
 
                 showAlert("Bienvenido de nuevo, " + user.nombre + " - " + user.rol, "success");
-                navigateTo("Home Page");
+                navigateTo("Home V2");
                 
             } else {
                 // Si llega aquí, es porque el SELECT no encontró filas (email o pass mal)

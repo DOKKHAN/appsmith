@@ -1,0 +1,3 @@
+SELECT *
+FROM adt.evaluaciones_sesion
+ORDER BY fecha DESC, id_sesion DESC;

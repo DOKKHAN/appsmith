@@ -1,0 +1,54 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 28,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "isVisible"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "",
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{!sel_eval_student.selectedOptionValue}}",
+  "isLoading": false,
+  "isVisible": "{{appsmith.store.homeV2View === 'evaluaciones'}}",
+  "key": "k441181874d",
+  "leftColumn": 45,
+  "minWidth": 120,
+  "needsErrorInfo": false,
+  "onClick": "{{complete_initial_evaluation.run().then(() => { showAlert('Evaluación completada', 'success'); get_pending_initial_evaluations.run(); get_pending_students_lookup.run(); get_active_students.run(); get_students_lookup.run(); }).catch((error) => showAlert(error.message, 'error'));}}",
+  "parentColumnSpace": 16,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 63,
+  "text": "Completar evaluación",
+  "topRow": 24,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "w4268abef12",
+  "widgetName": "btn_complete_eval"
+}

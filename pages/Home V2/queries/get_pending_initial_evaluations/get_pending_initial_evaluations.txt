@@ -1,0 +1,5 @@
+SELECT *
+FROM adt.alumnos
+WHERE estado_activo = TRUE
+  AND COALESCE(evaluacion_inicial, FALSE) = FALSE
+ORDER BY nombre_completo ASC;
