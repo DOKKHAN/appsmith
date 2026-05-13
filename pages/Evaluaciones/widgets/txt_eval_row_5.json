@@ -1,0 +1,43 @@
+{
+  "animateLoading": true,
+  "bottomRow": 75,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isLoading": false,
+  "isVisible": true,
+  "key": "kd00ae39d03",
+  "leftColumn": 3,
+  "minWidth": 450,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 16,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 8,
+  "topRow": 72,
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "w3652665e8d",
+  "widgetName": "txt_eval_row_5",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "dynamicHeight": "AUTO_HEIGHT",
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "0.875rem",
+  "fontStyle": "BOLD",
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "overflow": "NONE",
+  "shouldTruncate": false,
+  "text": "Ejercicio 5",
+  "textAlign": "LEFT",
+  "textColor": "#231F20",
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}"
+}

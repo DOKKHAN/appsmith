@@ -1,0 +1,57 @@
+{
+  "animateLoading": true,
+  "bottomRow": 87,
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isLoading": false,
+  "isVisible": true,
+  "key": "kf1b64072b0",
+  "leftColumn": 8,
+  "minWidth": 450,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 16,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 30,
+  "topRow": 80,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "wa65d1b82ac",
+  "widgetName": "sel_eval_exercise_6",
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isRequired": false,
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Ejercicio",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "optionLabel": "label",
+  "optionValue": "value",
+  "placeholderText": "Seleccionar",
+  "serverSideFiltering": false,
+  "sourceData": "{{(() => { const rows = get_exercises_lookup.data || []; return rows.length ? rows.map((e) => ({ label: e.label, value: e.value })) : [{ label: 'Sin ejercicios cargados', value: '__empty__' }]; })()}}"
+}

@@ -20,7 +20,6 @@ export default {
                 
                 // IMPORTANTE: Inicializar la pestaña para que el Sidebar funcione
                 await storeValue("selectedTab", "Inicio");
-                await storeValue("homeV2View", "dashboard");
 
                 showAlert("Bienvenido de nuevo, " + user.nombre + " - " + user.rol, "success");
                 navigateTo("Home V2");

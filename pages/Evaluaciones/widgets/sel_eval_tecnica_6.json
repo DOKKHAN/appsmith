@@ -1,0 +1,57 @@
+{
+  "animateLoading": true,
+  "bottomRow": 87,
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isLoading": false,
+  "isVisible": true,
+  "key": "kde83a636d4",
+  "leftColumn": 45,
+  "minWidth": 450,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 16,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 51,
+  "topRow": 80,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "w458dbb020a",
+  "widgetName": "sel_eval_tecnica_6",
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isRequired": false,
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Técnica",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "optionLabel": "label",
+  "optionValue": "value",
+  "placeholderText": "Seleccionar",
+  "serverSideFiltering": false,
+  "sourceData": "[\n  { \"label\": \"5 - Excelente\", \"value\": 5 },\n  { \"label\": \"4 - Muy buena\", \"value\": 4 },\n  { \"label\": \"3 - Buena\", \"value\": 3 },\n  { \"label\": \"2 - Regular\", \"value\": 2 },\n  { \"label\": \"1 - Deficiente\", \"value\": 1 }\n]"
+}

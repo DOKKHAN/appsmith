@@ -44,6 +44,18 @@
     {
       "id": "Dashboard",
       "isDefault": false
+    },
+    {
+      "id": "Alumnos",
+      "isDefault": false
+    },
+    {
+      "id": "Evaluaciones",
+      "isDefault": false
+    },
+    {
+      "id": "Rutinas",
+      "isDefault": false
     }
   ],
   "staticUrlSettings": {

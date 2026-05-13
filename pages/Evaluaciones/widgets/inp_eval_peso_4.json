@@ -1,0 +1,52 @@
+{
+  "animateLoading": true,
+  "bottomRow": 71,
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isLoading": false,
+  "isVisible": true,
+  "key": "kcf301a511c",
+  "leftColumn": 30,
+  "minWidth": 450,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 16,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 35,
+  "topRow": 64,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "w05823da62f",
+  "widgetName": "inp_eval_peso_4",
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "autoFocus": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "boxShadow": "none",
+  "defaultText": "",
+  "dynamicHeight": "FIXED",
+  "iconAlign": "left",
+  "inputType": "NUMBER",
+  "isDisabled": false,
+  "isRequired": false,
+  "label": "Peso",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "placeholderText": "",
+  "resetOnSubmit": false,
+  "shouldAllowAutofill": false,
+  "showStepArrows": false
+}

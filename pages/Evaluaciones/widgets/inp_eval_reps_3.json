@@ -1,0 +1,52 @@
+{
+  "animateLoading": true,
+  "bottomRow": 63,
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isLoading": false,
+  "isVisible": true,
+  "key": "k5aac682779",
+  "leftColumn": 35,
+  "minWidth": 450,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 16,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 40,
+  "topRow": 56,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "w1d0d91fd55",
+  "widgetName": "inp_eval_reps_3",
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "autoFocus": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "boxShadow": "none",
+  "defaultText": "",
+  "dynamicHeight": "FIXED",
+  "iconAlign": "left",
+  "inputType": "NUMBER",
+  "isDisabled": false,
+  "isRequired": false,
+  "label": "Reps",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "placeholderText": "",
+  "resetOnSubmit": false,
+  "shouldAllowAutofill": false,
+  "showStepArrows": false
+}
