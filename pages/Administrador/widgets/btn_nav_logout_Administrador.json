@@ -3,12 +3,15 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 5,
   "boxShadow": "none",
-  "buttonColor": "#b91c1c",
+  "buttonColor": "#C61D1D",
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "buttonColor"
     }
   ],
   "dynamicTriggerPathList": [
@@ -22,7 +25,7 @@
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "k447c50388e",
+  "key": "k3d454153d8",
   "leftColumn": 59,
   "minWidth": 120,
   "needsErrorInfo": false,
@@ -40,6 +43,6 @@
   "topRow": 1,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "w7421f49f84",
-  "widgetName": "btn_nav_logout_Alumnos"
+  "widgetId": "wf458d4e460",
+  "widgetName": "btn_nav_logout_Administrador"
 }

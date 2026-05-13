@@ -105,6 +105,39 @@ export default {
     }));
   },
 
+  selectedStudent() {
+    const idAlumno = Number(sel_eval_student.selectedOptionValue);
+    const sources = [
+      get_pending_initial_evaluations.data || [],
+      get_pending_students_lookup.data || [],
+      appsmith.store.evaluaciones_student_options || []
+    ];
+    return sources.flat().find((student) => Number(student.id_alumno || student.value) === idAlumno) || {};
+  },
+
+  normalizeObjetivo(value) {
+    const raw = String(value || '').trim();
+    const key = raw.toLowerCase();
+    if (key.includes('recompos')) return 'RC';
+    if (key.includes('grasa')) return 'perdida_de_grasa';
+    if (key.includes('muscul')) return 'musculatura';
+    return raw || null;
+  },
+
+  routineAutomationPayload() {
+    const student = this.selectedStudent();
+    return [
+      {
+        id_alumno: Number(sel_eval_student.selectedOptionValue),
+        objetivo: this.normalizeObjetivo(student.objetivo || student.enfoque_principal || inp_eval_enfoque.text),
+        prioridad_recomposicion: student.prioridad_recomposicion || null,
+        enfoque_principal: student.enfoque_principal || inp_eval_enfoque.text || null,
+        enfoque_especifico: inp_eval_enfoque.text || student.enfoque_especifico || null,
+        debilidad: student.debilidad || null
+      }
+    ];
+  },
+
   async saveEvaluation() {
     if (!this.canSaveEvaluation()) {
       showAlert('Completa alumno, enfoque, frecuencia, nivel y al menos un ejercicio con peso/reps/RPE/técnica.', 'warning');
@@ -116,6 +149,7 @@ export default {
       if (!idSesion) throw new Error('No se pudo crear la sesión de evaluación.');
       await insert_eval_movements_v2.run({ id_sesion: idSesion });
       await complete_initial_evaluation.run();
+      await routine_automation.run();
       showAlert('Evaluación guardada y alumno actualizado', 'success');
       resetWidget('sel_eval_student');
       await this.refreshCurrentView('evaluaciones');
