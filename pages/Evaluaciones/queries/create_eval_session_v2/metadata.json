@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO adt.evaluaciones_sesion (id_alumno, fecha)\nVALUES ({{sel_eval_student.selectedOptionValue}}, CURRENT_DATE)\nRETURNING id_sesion;",
+      "body": "INSERT INTO adt.evaluaciones_sesion (id_alumno, fecha)\nVALUES ({{sel_eval_student.selectedOptionValue}}, CURRENT_DATE)\nRETURNING id_sesion;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

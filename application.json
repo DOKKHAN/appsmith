@@ -42,10 +42,6 @@
       "isDefault": true
     },
     {
-      "id": "Dashboard",
-      "isDefault": false
-    },
-    {
       "id": "Alumnos",
       "isDefault": false
     },

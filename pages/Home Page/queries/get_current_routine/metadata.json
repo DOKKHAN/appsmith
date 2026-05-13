@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    rm.nombre_plan, \n    rm.id_rutina,\n    rm.fecha_inicio,\n    m.id_macrociclo,\n    meso.id_mesociclo,\n    meso.fase_tipo\nFROM adt.rutinas_maestras rm\nJOIN adt.macrociclos m ON rm.id_macrociclo = m.id_macrociclo\nJOIN adt.mesociclos meso ON m.id_macrociclo = meso.id_macrociclo\nWHERE rm.id_alumno = {{sel_alumno_evaluado.selectedOptionValue || 0}}\nAND rm.esta_activa = TRUE\nAND meso.esta_activo = TRUE\nLIMIT 1;",
+      "body": "SELECT \n    rm.nombre_plan, \n    rm.id_rutina,\n    rm.fecha_inicio,\n    m.id_macrociclo,\n    meso.id_mesociclo,\n    meso.fase_tipo\nFROM adt.rutinas_maestras rm\nJOIN adt.macrociclos m ON rm.id_macrociclo = m.id_macrociclo\nJOIN adt.mesociclos meso ON m.id_macrociclo = meso.id_macrociclo\nWHERE rm.id_alumno = {{sel_alumno_evaluado.selectedOptionValue || 0}}\nAND rm.esta_activa = TRUE\nAND meso.esta_activo = TRUE\nLIMIT 1;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

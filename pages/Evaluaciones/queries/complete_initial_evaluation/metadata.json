@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE adt.alumnos\nSET\n  enfoque_especifico = {{inp_eval_enfoque.text || null}},\n  frecuencia_semanal = {{inp_eval_frecuencia.text || null}},\n  nivel_experiencia = {{sel_eval_nivel.selectedOptionValue}},\n  observaciones = {{inp_eval_observaciones.text || null}},\n  evaluacion_inicial = TRUE\nWHERE id_alumno = {{sel_eval_student.selectedOptionValue}}\nRETURNING *;",
+      "body": "UPDATE adt.alumnos\nSET\n  enfoque_especifico = {{inp_eval_enfoque.text || null}},\n  frecuencia_semanal = {{inp_eval_frecuencia.text || null}},\n  nivel_experiencia = {{sel_eval_nivel.selectedOptionValue}},\n  observaciones = {{inp_eval_observaciones.text || null}},\n  evaluacion_inicial = TRUE\nWHERE id_alumno = {{sel_eval_student.selectedOptionValue}}\nRETURNING *;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

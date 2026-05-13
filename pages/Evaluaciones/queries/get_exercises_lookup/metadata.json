@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n  id_ejercicio AS value,\n  nombre || ' - ' || COALESCE(grupo_muscular_primario, 'Sin grupo') AS label,\n  id_ejercicio,\n  nombre,\n  grupo_muscular_primario AS grupo\nFROM adt.ejercicios\nORDER BY nombre ASC;",
+      "body": "SELECT\n  id_ejercicio AS value,\n  nombre || ' - ' || COALESCE(grupo_muscular_primario, 'Sin grupo') AS label,\n  id_ejercicio,\n  nombre,\n  grupo_muscular_primario AS grupo\nFROM adt.ejercicios\nORDER BY nombre ASC;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
