@@ -1,17 +1,30 @@
 export default {
   async loadStudents() {
     try {
-      const [lookupRows, activeRows] = await Promise.all([
+      await Promise.all([
         get_students_lookup.run(),
         get_active_students.run()
       ]);
-      await storeValue('alumnos_student_options', activeRows && activeRows.length ? activeRows : lookupRows || []);
+
+      const lookupRows = get_students_lookup.data || [];
+      const activeRows = get_active_students.data || [];
+      const rows = activeRows.length ? activeRows : lookupRows;
+
+      await storeValue('alumnos_student_options', rows);
+
+      return {
+        loaded: rows.length,
+        activeRows: activeRows.length,
+        lookupRows: lookupRows.length,
+        rows
+      };
     } catch (error) {
       showAlert('Error cargando alumnos: ' + error.message, 'error');
+      return { loaded: 0, error: error.message };
     }
   },
 
   async init() {
-    await this.loadStudents();
+    return await this.loadStudents();
   }
 }
