@@ -1,5 +1,8 @@
-SELECT *
-FROM adt.alumnos
-WHERE estado_activo = TRUE
-  AND COALESCE(evaluacion_inicial, FALSE) = FALSE
-ORDER BY nombre_completo ASC;
+SELECT
+  a.id_alumno AS value,
+  a.nombre_completo || ' (' || COALESCE(NULLIF(a.rut, ''), 'Sin RUT') || ')' AS label,
+  a.*
+FROM adt.alumnos a
+WHERE a.estado_activo = TRUE
+  AND COALESCE(a.evaluacion_inicial, FALSE) = FALSE
+ORDER BY a.nombre_completo ASC;

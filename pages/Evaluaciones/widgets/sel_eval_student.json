@@ -49,7 +49,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 32,
   "serverSideFiltering": false,
-  "sourceData": "{{get_pending_students_lookup.data || []}}",
+  "sourceData": "{{get_pending_initial_evaluations.data || []}}",
   "topRow": 13,
   "type": "SELECT_WIDGET",
   "version": 1,
