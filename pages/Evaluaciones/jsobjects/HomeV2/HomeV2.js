@@ -117,8 +117,8 @@ export default {
       await insert_eval_movements_v2.run({ id_sesion: idSesion });
       await complete_initial_evaluation.run();
       showAlert('Evaluación guardada y alumno actualizado', 'success');
-      await Promise.all([get_pending_students_lookup.run(), get_pending_initial_evaluations.run(), get_students_lookup.run(), get_active_students.run()]);
       resetWidget('sel_eval_student');
+      await this.refreshCurrentView('evaluaciones');
     } catch (error) {
       showAlert('Error guardando evaluación: ' + error.message, 'error');
     }
