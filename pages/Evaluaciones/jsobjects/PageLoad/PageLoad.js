@@ -26,6 +26,7 @@ export default {
   },
 
   async init() {
+    await new Promise((resolve) => setTimeout(resolve, 100));
     return await this.loadEvaluationData();
   }
 }
