@@ -26,6 +26,6 @@
     "name": "get_exercises_lookup",
     "pageId": "Evaluaciones",
     "runBehaviour": "AUTOMATIC",
-    "userSetOnLoad": false
+    "userSetOnLoad": true
   }
 }

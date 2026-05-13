@@ -26,6 +26,6 @@
     "name": "get_students_lookup",
     "pageId": "Rutinas",
     "runBehaviour": "AUTOMATIC",
-    "userSetOnLoad": false
+    "userSetOnLoad": true
   }
 }

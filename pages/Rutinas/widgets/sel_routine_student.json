@@ -54,7 +54,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 32,
   "serverSideFiltering": false,
-  "sourceData": "{{(() => { const rows = get_students_lookup.data || []; return rows.length ? rows.map((a) => ({ label: a.label || ((a.nombre_completo || 'Sin nombre') + ' (' + (a.rut || 'Sin RUT') + ')'), value: a.value || a.id_alumno })) : [{ label: 'Sin datos cargados', value: '__empty__' }]; })()}}",
+  "sourceData": "{{(get_students_lookup.data || []).map((a) => ({ label: a.label || ((a.nombre_completo || 'Sin nombre') + ' (' + (a.rut || 'Sin RUT') + ')'), value: a.value || a.id_alumno }))}}",
   "topRow": 13,
   "type": "SELECT_WIDGET",
   "version": 1,

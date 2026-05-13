@@ -26,6 +26,6 @@
     "name": "get_pending_initial_evaluations",
     "pageId": "Evaluaciones",
     "runBehaviour": "AUTOMATIC",
-    "userSetOnLoad": false
+    "userSetOnLoad": true
   }
 }

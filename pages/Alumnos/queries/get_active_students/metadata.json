@@ -26,6 +26,6 @@
     "name": "get_active_students",
     "pageId": "Alumnos",
     "runBehaviour": "AUTOMATIC",
-    "userSetOnLoad": false
+    "userSetOnLoad": true
   }
 }
