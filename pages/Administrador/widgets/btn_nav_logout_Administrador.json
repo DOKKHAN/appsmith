@@ -29,7 +29,7 @@
   "leftColumn": 59,
   "minWidth": 120,
   "needsErrorInfo": false,
-  "onClick": "{{clearStore().then(() => { showAlert('Has cerrado sesión correctamente', 'success'); navigateTo('Login'); });}}",
+  "onClick": "{{Promise.all([removeValue('user_id'), removeValue('user_name'), removeValue('tenant_schema'), removeValue('user_role'), removeValue('selectedTab')]).then(() => { showAlert('Has cerrado sesión correctamente', 'success'); navigateTo('Login'); });}}",
   "parentColumnSpace": 16,
   "parentId": "0",
   "parentRowSpace": 10,

@@ -15,13 +15,16 @@ export default {
 
 	// Función de Logout
 	async logout() {
-		// 1. Limpiamos TODA la tienda de Appsmith (user_id, tenant_schema, etc.)
-		await clearStore();
+		await Promise.all([
+			removeValue("user_id"),
+			removeValue("user_name"),
+			removeValue("tenant_schema"),
+			removeValue("user_role"),
+			removeValue("selectedTab")
+		]);
 		
-		// 2. Mensaje de confirmación
 		showAlert("Has cerrado sesión correctamente", "success");
 		
-		// 3. Redirigir al Login inmediatamente
 		navigateTo("Login");
 	}
 }

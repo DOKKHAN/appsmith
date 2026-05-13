@@ -1,33 +1,17 @@
 export default {
   async init() {
-    await this.refreshCurrentView('evaluaciones');
+    return await PageLoad.loadEvaluationData();
   },
 
   async refreshCurrentView(view = 'evaluaciones') {
     try {
-      if (view === 'admin') {
-        await Promise.all([get_students_lookup.run(), get_active_students.run()]);
-      }
       if (view === 'evaluaciones') {
-        await Promise.all([get_pending_students_lookup.run(), get_pending_initial_evaluations.run()]);
-        const pendingRows = get_pending_initial_evaluations.data || [];
-        const pendingLookupRows = get_pending_students_lookup.data || [];
-        await storeValue('evaluaciones_student_options', pendingRows.length ? pendingRows : pendingLookupRows);
-        try {
-          await get_exercises_lookup.run();
-          await storeValue('evaluaciones_exercise_options', get_exercises_lookup.data || []);
-        } catch (exerciseError) {
-          showAlert('Alumnos cargados, pero hubo un error cargando ejercicios: ' + exerciseError.message, 'warning');
-        }
+        return await PageLoad.loadEvaluationData();
       }
-      if (view === 'rutinas') {
-        await get_students_lookup.run();
-        if (sel_routine_student.selectedOptionValue && sel_routine_student.selectedOptionValue !== '__empty__') {
-          await get_student_routine.run();
-        }
-      }
+      return null;
     } catch (error) {
       showAlert('Error cargando datos: ' + error.message, 'error');
+      return { error: error.message };
     }
   },
 
@@ -85,7 +69,7 @@ export default {
         rpe: inp_eval_rpe_6.text,
         tecnica: sel_eval_tecnica_6.selectedOptionValue
       }
-    ].filter((row) => row.id_ejercicio && row.id_ejercicio !== '__empty__');
+    ].filter((row) => row.id_ejercicio && !['__empty__', '__loading__'].includes(row.id_ejercicio));
   },
 
   validEvaluationRows() {
@@ -94,7 +78,7 @@ export default {
 
   canSaveEvaluation() {
     return !!sel_eval_student.selectedOptionValue &&
-      sel_eval_student.selectedOptionValue !== '__empty__' &&
+      !['__empty__', '__loading__'].includes(sel_eval_student.selectedOptionValue) &&
       !!inp_eval_enfoque.text &&
       !!inp_eval_frecuencia.text &&
       !!sel_eval_nivel.selectedOptionValue &&
@@ -117,9 +101,9 @@ export default {
   selectedStudent() {
     const idAlumno = Number(sel_eval_student.selectedOptionValue);
     const sources = [
+      appsmith.store.evaluaciones_student_options || [],
       get_pending_initial_evaluations.data || [],
-      get_pending_students_lookup.data || [],
-      appsmith.store.evaluaciones_student_options || []
+      get_pending_students_lookup.data || []
     ];
     return sources.flat().find((student) => Number(student.id_alumno || student.value) === idAlumno) || {};
   },
