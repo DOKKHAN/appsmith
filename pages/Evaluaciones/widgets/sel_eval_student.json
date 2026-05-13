@@ -22,7 +22,11 @@
       "key": "sourceData"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onFilterUpdate"
+    }
+  ],
   "isDisabled": false,
   "isFilterable": true,
   "isLoading": false,
@@ -48,11 +52,12 @@
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 32,
-  "serverSideFiltering": false,
-  "sourceData": "{{(() => { const rows = (get_pending_initial_evaluations.data && get_pending_initial_evaluations.data.length ? get_pending_initial_evaluations.data : get_pending_students_lookup.data) || []; return rows.length ? rows.map((a) => ({ label: a.label || ((a.nombre_completo || 'Sin nombre') + ' (' + (a.rut || 'Sin RUT') + ')'), value: a.value || a.id_alumno })) : [{ label: 'Sin datos cargados', value: '__empty__' }]; })()}}",
+  "serverSideFiltering": true,
+  "sourceData": "{{(() => { const rows = (get_pending_initial_evaluations.data && get_pending_initial_evaluations.data.length ? get_pending_initial_evaluations.data : (appsmith.store.evaluaciones_student_options || get_pending_students_lookup.data)) || []; return rows.length ? rows.map((a) => ({ label: a.label || ((a.nombre_completo || 'Sin nombre') + ' (' + (a.rut || 'Sin RUT') + ')'), value: a.value || a.id_alumno })) : [{ label: 'Sin datos cargados', value: '__empty__' }]; })()}}",
   "topRow": 13,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "w03d992a804",
-  "widgetName": "sel_eval_student"
+  "widgetName": "sel_eval_student",
+  "onFilterUpdate": "{{PageLoad.loadEvaluationData();}}"
 }

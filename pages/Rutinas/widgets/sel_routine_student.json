@@ -25,6 +25,9 @@
   "dynamicTriggerPathList": [
     {
       "key": "onOptionChange"
+    },
+    {
+      "key": "onFilterUpdate"
     }
   ],
   "isDisabled": false,
@@ -53,11 +56,12 @@
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 32,
-  "serverSideFiltering": false,
-  "sourceData": "{{(() => { const rows = get_students_lookup.data || []; return rows.length ? rows.map((a) => ({ label: a.label || ((a.nombre_completo || 'Sin nombre') + ' (' + (a.rut || 'Sin RUT') + ')'), value: a.value || a.id_alumno })) : [{ label: 'Sin datos cargados', value: '__empty__' }]; })()}}",
+  "serverSideFiltering": true,
+  "sourceData": "{{(() => { const rows = (get_students_lookup.data && get_students_lookup.data.length ? get_students_lookup.data : appsmith.store.rutinas_student_options) || []; return rows.length ? rows.map((a) => ({ label: a.label || ((a.nombre_completo || 'Sin nombre') + ' (' + (a.rut || 'Sin RUT') + ')'), value: a.value || a.id_alumno })) : [{ label: 'Sin datos cargados', value: '__empty__' }]; })()}}",
   "topRow": 13,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "w18bdc9354b",
-  "widgetName": "sel_routine_student"
+  "widgetName": "sel_routine_student",
+  "onFilterUpdate": "{{PageLoad.loadStudents();}}"
 }
