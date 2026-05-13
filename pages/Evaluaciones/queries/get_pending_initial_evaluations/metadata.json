@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\r\n  a.id_alumno AS value,\r\n  a.nombre_completo || ' (' || COALESCE(NULLIF(a.rut, ''), 'Sin RUT') || ')' AS label,\r\n  a.*\r\nFROM adt.alumnos a\r\nWHERE a.estado_activo = TRUE\n  AND COALESCE(a.evaluacion_inicial, FALSE) = FALSE\nORDER BY a.nombre_completo ASC;\n",
+      "body": "SELECT\n  a.id_alumno AS value,\n  a.nombre_completo || ' (' || COALESCE(NULLIF(a.rut, ''), 'Sin RUT') || ')' AS label,\n  a.*\nFROM adt.alumnos a\nWHERE a.estado_activo = TRUE\n  AND COALESCE(a.evaluacion_inicial, FALSE) = FALSE\nORDER BY a.nombre_completo ASC;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
