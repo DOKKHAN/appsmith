@@ -9,7 +9,16 @@ export default {
         await Promise.all([get_students_lookup.run(), get_active_students.run()]);
       }
       if (view === 'evaluaciones') {
-        await Promise.all([get_pending_students_lookup.run(), get_pending_initial_evaluations.run(), get_exercises_lookup.run()]);
+        await Promise.all([get_pending_students_lookup.run(), get_pending_initial_evaluations.run()]);
+        const pendingRows = get_pending_initial_evaluations.data || [];
+        const pendingLookupRows = get_pending_students_lookup.data || [];
+        await storeValue('evaluaciones_student_options', pendingRows.length ? pendingRows : pendingLookupRows);
+        try {
+          await get_exercises_lookup.run();
+          await storeValue('evaluaciones_exercise_options', get_exercises_lookup.data || []);
+        } catch (exerciseError) {
+          showAlert('Alumnos cargados, pero hubo un error cargando ejercicios: ' + exerciseError.message, 'warning');
+        }
       }
       if (view === 'rutinas') {
         await get_students_lookup.run();
