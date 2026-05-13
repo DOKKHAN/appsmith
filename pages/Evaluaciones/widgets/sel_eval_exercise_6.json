@@ -53,5 +53,5 @@
   "optionValue": "value",
   "placeholderText": "Seleccionar",
   "serverSideFiltering": false,
-  "sourceData": "{{get_exercises_lookup.data || []}}"
+  "sourceData": "{{(() => { const rows = get_exercises_lookup.data || []; return rows.length ? rows.map((e) => ({ label: e.label || e.nombre || ('Ejercicio #' + (e.value || e.id_ejercicio)), value: e.value || e.id_ejercicio })) : [{ label: 'Sin ejercicios cargados', value: '__empty__' }]; })()}}"
 }
