@@ -53,5 +53,5 @@
   "optionValue": "value",
   "placeholderText": "Seleccionar",
   "serverSideFiltering": false,
-  "sourceData": "{{(() => { if (appsmith.store.evaluaciones_loading) return [{ label: 'Cargando ejercicios...', value: '__loading__' }]; const rows = appsmith.store.evaluaciones_exercise_options || []; return rows.length ? rows.map((e) => ({ label: e.label || e.nombre || ('Ejercicio #' + (e.value || e.id_ejercicio)), value: e.value || e.id_ejercicio })) : [{ label: 'Sin ejercicios cargados', value: '__empty__' }]; })()}}"
+  "sourceData": "{{(() => { const rows = (get_exercises_lookup.data && get_exercises_lookup.data.length ? get_exercises_lookup.data : (appsmith.store.evaluaciones_exercise_options || [])); if (!rows.length && appsmith.store.evaluaciones_loading) return [{ label: 'Cargando ejercicios...', value: '__loading__' }]; return rows.length ? rows.map((e) => ({ label: e.label || e.nombre || ('Ejercicio #' + (e.value || e.id_ejercicio)), value: e.value || e.id_ejercicio })) : [{ label: 'Sin ejercicios cargados', value: '__empty__' }]; })()}}"
 }

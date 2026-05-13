@@ -25,7 +25,7 @@
     "fullyQualifiedName": "HomeV2.init",
     "name": "init",
     "pageId": "Evaluaciones",
-    "runBehaviour": "MANUAL",
-    "userSetOnLoad": false
+    "runBehaviour": "ON_PAGE_LOAD",
+    "userSetOnLoad": true
   }
 }
