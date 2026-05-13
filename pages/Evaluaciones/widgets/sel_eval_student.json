@@ -22,7 +22,11 @@
       "key": "sourceData"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onDropdownOpen"
+    }
+  ],
   "isDisabled": false,
   "isFilterable": true,
   "isLoading": false,
@@ -54,5 +58,6 @@
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "w03d992a804",
-  "widgetName": "sel_eval_student"
+  "widgetName": "sel_eval_student",
+  "onDropdownOpen": "{{Promise.all([get_pending_students_lookup.run(), get_pending_initial_evaluations.run()]).then(() => storeValue('evaluaciones_student_options', (get_pending_initial_evaluations.data && get_pending_initial_evaluations.data.length ? get_pending_initial_evaluations.data : get_pending_students_lookup.data) || [])).catch((error) => showAlert('Error cargando alumnos pendientes: '+ error.message, 'error'));}}"
 }

@@ -12,7 +12,11 @@
       "key": "sourceData"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onDropdownOpen"
+    }
+  ],
   "isLoading": false,
   "isVisible": true,
   "key": "k94795f1bfd",
@@ -53,5 +57,6 @@
   "optionValue": "value",
   "placeholderText": "Seleccionar",
   "serverSideFiltering": false,
-  "sourceData": "{{(() => { const rows = (get_exercises_lookup.data && get_exercises_lookup.data.length ? get_exercises_lookup.data : (appsmith.store.evaluaciones_exercise_options || [])); if (!rows.length && appsmith.store.evaluaciones_loading) return [{ label: 'Cargando ejercicios...', value: '__loading__' }]; return rows.length ? rows.map((e) => ({ label: e.label || e.nombre || ('Ejercicio #' + (e.value || e.id_ejercicio)), value: e.value || e.id_ejercicio })) : [{ label: 'Sin ejercicios cargados', value: '__empty__' }]; })()}}"
+  "sourceData": "{{(() => { const rows = (get_exercises_lookup.data && get_exercises_lookup.data.length ? get_exercises_lookup.data : (appsmith.store.evaluaciones_exercise_options || [])); if (!rows.length && appsmith.store.evaluaciones_loading) return [{ label: 'Cargando ejercicios...', value: '__loading__' }]; return rows.length ? rows.map((e) => ({ label: e.label || e.nombre || ('Ejercicio #' + (e.value || e.id_ejercicio)), value: e.value || e.id_ejercicio })) : [{ label: 'Sin ejercicios cargados', value: '__empty__' }]; })()}}",
+  "onDropdownOpen": "{{get_exercises_lookup.run().then(() => storeValue('evaluaciones_exercise_options', get_exercises_lookup.data || [])).catch((error) => showAlert('Error cargando ejercicios: '+ error.message, 'error'));}}"
 }

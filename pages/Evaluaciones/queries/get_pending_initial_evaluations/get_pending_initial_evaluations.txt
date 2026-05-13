@@ -4,5 +4,5 @@ SELECT
   a.*
 FROM adt.alumnos a
 WHERE a.estado_activo = TRUE
-  AND a.evaluacion_inicial IS DISTINCT FROM TRUE
+  AND COALESCE(a.evaluacion_inicial, FALSE) = FALSE
 ORDER BY a.nombre_completo ASC;
