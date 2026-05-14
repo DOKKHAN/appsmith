@@ -25,7 +25,7 @@
     "dynamicBindingPathList": [],
     "name": "get_active_students",
     "pageId": "Evaluaciones",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }
