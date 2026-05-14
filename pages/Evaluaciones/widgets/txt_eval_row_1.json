@@ -1,6 +1,6 @@
 {
   "animateLoading": true,
-  "bottomRow": 43,
+  "bottomRow": 51,
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
@@ -22,7 +22,7 @@
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 8,
-  "topRow": 40,
+  "topRow": 48,
   "type": "TEXT_WIDGET",
   "version": 1,
   "widgetId": "w26010a106d",

@@ -1,6 +1,6 @@
 {
   "animateLoading": true,
-  "bottomRow": 36,
+  "bottomRow": 28,
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -15,7 +15,7 @@
   "dynamicTriggerPathList": [],
   "isLoading": false,
   "isVisible": true,
-  "key": "k5a8018457b",
+  "key": "k_eval_enfoque_principal",
   "leftColumn": 29,
   "minWidth": 450,
   "needsErrorInfo": false,
@@ -25,11 +25,11 @@
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 41,
-  "topRow": 29,
+  "topRow": 21,
   "type": "SELECT_WIDGET",
   "version": 1,
-  "widgetId": "w18218927d6",
-  "widgetName": "sel_eval_nivel",
+  "widgetId": "w_eval_enfoque_principal",
+  "widgetName": "sel_eval_enfoque_principal",
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "boxShadow": "none",
@@ -44,7 +44,7 @@
   "isRequired": true,
   "labelAlignment": "left",
   "labelPosition": "Top",
-  "labelText": "Nivel experiencia",
+  "labelText": "Enfoque principal",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
   "maxDynamicHeight": 9000,
@@ -53,5 +53,5 @@
   "optionValue": "value",
   "placeholderText": "Seleccionar",
   "serverSideFiltering": false,
-  "sourceData": "[\n  { \"label\": \"P1\", \"value\": \"P1\" },\n  { \"label\": \"P2\", \"value\": \"P2\" },\n  { \"label\": \"P3\", \"value\": \"P3\" },\n  { \"label\": \"I1\", \"value\": \"I1\" }\n]"
+  "sourceData": "[\n  {\n    \"label\": \"full_body\",\n    \"value\": \"full_body\"\n  },\n  {\n    \"label\": \"torso\",\n    \"value\": \"torso\"\n  },\n  {\n    \"label\": \"pierna\",\n    \"value\": \"pierna\"\n  },\n  {\n    \"label\": \"fullbody_torso_pierna\",\n    \"value\": \"fullbody_torso_pierna\"\n  },\n  {\n    \"label\": \"torso_pierna_torso\",\n    \"value\": \"torso_pierna_torso\"\n  },\n  {\n    \"label\": \"pierna_torso_pierna\",\n    \"value\": \"pierna_torso_pierna\"\n  }\n]"
 }

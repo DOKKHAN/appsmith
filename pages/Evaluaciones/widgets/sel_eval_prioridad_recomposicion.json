@@ -1,6 +1,6 @@
 {
   "animateLoading": true,
-  "bottomRow": 36,
+  "bottomRow": 28,
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -15,8 +15,8 @@
   "dynamicTriggerPathList": [],
   "isLoading": false,
   "isVisible": true,
-  "key": "k5a8018457b",
-  "leftColumn": 29,
+  "key": "k_eval_prioridad_recomposicion",
+  "leftColumn": 16,
   "minWidth": 450,
   "needsErrorInfo": false,
   "parentColumnSpace": 16,
@@ -24,12 +24,12 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 41,
-  "topRow": 29,
+  "rightColumn": 28,
+  "topRow": 21,
   "type": "SELECT_WIDGET",
   "version": 1,
-  "widgetId": "w18218927d6",
-  "widgetName": "sel_eval_nivel",
+  "widgetId": "w_eval_prioridad_recomposicion",
+  "widgetName": "sel_eval_prioridad_recomposicion",
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "boxShadow": "none",
@@ -44,7 +44,7 @@
   "isRequired": true,
   "labelAlignment": "left",
   "labelPosition": "Top",
-  "labelText": "Nivel experiencia",
+  "labelText": "Prioridad recomposición",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
   "maxDynamicHeight": 9000,
@@ -53,5 +53,5 @@
   "optionValue": "value",
   "placeholderText": "Seleccionar",
   "serverSideFiltering": false,
-  "sourceData": "[\n  { \"label\": \"P1\", \"value\": \"P1\" },\n  { \"label\": \"P2\", \"value\": \"P2\" },\n  { \"label\": \"P3\", \"value\": \"P3\" },\n  { \"label\": \"I1\", \"value\": \"I1\" }\n]"
+  "sourceData": "[\n  {\n    \"label\": \"musculatura\",\n    \"value\": \"musculatura\"\n  },\n  {\n    \"label\": \"perdida_de_grasa\",\n    \"value\": \"perdida_de_grasa\"\n  }\n]"
 }

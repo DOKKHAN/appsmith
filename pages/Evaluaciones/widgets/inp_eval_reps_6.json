@@ -1,6 +1,6 @@
 {
   "animateLoading": true,
-  "bottomRow": 87,
+  "bottomRow": 95,
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -22,7 +22,7 @@
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 40,
-  "topRow": 80,
+  "topRow": 88,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "w46ec97e443",
