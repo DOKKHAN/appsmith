@@ -5,6 +5,15 @@
   "dynamicBindingPathList": [
     {
       "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    },
+    {
+      "key": "truncateButtonColor"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
