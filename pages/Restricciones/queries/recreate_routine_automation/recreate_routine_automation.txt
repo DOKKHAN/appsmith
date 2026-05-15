@@ -1,0 +1,2 @@
+POST /webhook/routines_automation
+Body: {{JSON.stringify(Restricciones.routineAutomationPayload())}}

@@ -66,5 +66,55 @@ export default {
     } catch (error) {
       showAlert('Error eliminando restricción: ' + error.message, 'error');
     }
+  },
+
+  selectedStudent() {
+    const idAlumno = Number(sel_restr_student.selectedOptionValue);
+    const sources = [
+      get_restr_students.data || [],
+      appsmith.store.restr_students_options || []
+    ];
+    return sources.flat().find((student) => Number(student.id_alumno || student.value) === idAlumno) || {};
+  },
+
+  noneToNull(value) {
+    return ['ninguno', 'ninguna', '', null, undefined].includes(value) ? null : value;
+  },
+
+  routineAutomationPayload() {
+    const student = this.selectedStudent();
+    return [
+      {
+        id_alumno: Number(sel_restr_student.selectedOptionValue),
+        objetivo: student.objetivo || null,
+        prioridad_recomposicion: student.prioridad_recomposicion || null,
+        enfoque_principal: student.enfoque_principal || null,
+        enfoque_especifico: this.noneToNull(student.enfoque_especifico),
+        debilidad: this.noneToNull(student.debilidad)
+      }
+    ];
+  },
+
+  async savePendingAssignmentIfNeeded() {
+    if (sel_problem_to_assign.selectedOptionValue && sel_problem_to_assign.selectedOptionValue !== '__empty__') {
+      await assign_student_problem.run();
+    }
+    await get_student_restrictions.run();
+  },
+
+  async recreateRoutine() {
+    if (!this.hasStudent()) {
+      showAlert('Selecciona un alumno antes de recrear la rutina.', 'warning');
+      return;
+    }
+    try {
+      await this.savePendingAssignmentIfNeeded();
+      await get_restr_students.run();
+      await storeValue('restr_students_options', get_restr_students.data || []);
+      await recreate_routine_automation.run();
+      showAlert('Rutina enviada a re-creación con las restricciones actualizadas', 'success');
+    } catch (error) {
+      showAlert('Error re-creando rutina: ' + error.message, 'error');
+    }
   }
 }

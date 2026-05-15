@@ -1,9 +1,7 @@
 SELECT
-  id_alumno AS value,
-  nombre_completo || ' (' || COALESCE(NULLIF(rut, ''), 'Sin RUT') || ')' AS label,
-  id_alumno,
-  nombre_completo,
-  COALESCE(NULLIF(rut, ''), 'Sin RUT') AS rut
-FROM adt.alumnos
-WHERE estado_activo = TRUE
-ORDER BY nombre_completo ASC;
+  a.id_alumno AS value,
+  a.nombre_completo || ' (' || COALESCE(NULLIF(a.rut, ''), 'Sin RUT') || ')' AS label,
+  a.*
+FROM adt.alumnos a
+WHERE a.estado_activo = TRUE
+ORDER BY a.nombre_completo ASC;
