@@ -1,0 +1,10 @@
+INSERT INTO adt.alumno_problemas (id_alumno, id_problema, fecha_deteccion, esta_activo)
+VALUES (
+  {{sel_restr_student.selectedOptionValue}},
+  {{sel_problem_to_assign.selectedOptionValue}},
+  {{inp_problem_date.text || new Date().toISOString().slice(0, 10)}},
+  {{sel_problem_active.selectedOptionValue !== 'false'}}
+)
+ON CONFLICT (id_alumno, id_problema, fecha_deteccion)
+DO UPDATE SET esta_activo = EXCLUDED.esta_activo
+RETURNING *;

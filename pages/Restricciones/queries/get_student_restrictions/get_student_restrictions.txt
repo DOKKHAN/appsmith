@@ -1,0 +1,16 @@
+SELECT
+  ap.id_relacion,
+  ap.id_alumno,
+  ap.id_problema,
+  pr.nombre_problema,
+  pr.tipo_impacto,
+  pr.patron_a_evitar,
+  pr.articulacion_afectada,
+  pr.instruccion_automatica,
+  pr.comentario,
+  ap.fecha_deteccion,
+  ap.esta_activo
+FROM adt.alumno_problemas ap
+JOIN adt.problemas_restricciones pr ON pr.id_problema = ap.id_problema
+WHERE ap.id_alumno = {{Number(sel_restr_student.selectedOptionValue) || 0}}
+ORDER BY ap.esta_activo DESC, ap.fecha_deteccion DESC, pr.nombre_problema ASC;

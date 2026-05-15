@@ -1,0 +1,63 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 24,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onDropdownOpen"
+    }
+  ],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "k_sel_problem_to_assign",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Problema/restricción",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 34,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "needsErrorInfo": false,
+  "optionLabel": "label",
+  "optionValue": "value",
+  "parentColumnSpace": 16,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placeholderText": "Buscar problema",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 58,
+  "serverSideFiltering": false,
+  "sourceData": "{{(() => { const rows = (get_problem_catalog.data && get_problem_catalog.data.length ? get_problem_catalog.data : appsmith.store.problem_catalog_options) || []; return rows.length ? rows.map((p) => ({ label: p.label || ((p.nombre_problema || p.id_problema) + ' - ' + (p.tipo_impacto || 'Sin impacto')), value: p.value || p.id_problema })) : [{ label: 'Sin problemas cargados', value: '__empty__' }]; })()}}",
+  "topRow": 17,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "w_sel_problem_to_assign",
+  "widgetName": "sel_problem_to_assign",
+  "onDropdownOpen": "{{get_problem_catalog.run().then(() => storeValue('problem_catalog_options', get_problem_catalog.data || [])).catch((error) => showAlert('Error cargando problemas: ' + error.message, 'error'));}}"
+}

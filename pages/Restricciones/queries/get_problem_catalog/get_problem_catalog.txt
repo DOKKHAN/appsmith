@@ -1,0 +1,12 @@
+SELECT
+  id_problema AS value,
+  nombre_problema || ' - ' || COALESCE(tipo_impacto, 'Sin impacto') AS label,
+  id_problema,
+  nombre_problema,
+  tipo_impacto,
+  patron_a_evitar,
+  articulacion_afectada,
+  instruccion_automatica,
+  comentario
+FROM adt.problemas_restricciones
+ORDER BY nombre_problema ASC;

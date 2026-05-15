@@ -1,0 +1,4 @@
+UPDATE adt.alumno_problemas
+SET esta_activo = {{this.params.esta_activo}}
+WHERE id_relacion = {{tbl_student_restrictions.selectedRow.id_relacion}}
+RETURNING *;

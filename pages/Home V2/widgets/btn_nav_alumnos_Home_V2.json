@@ -38,7 +38,7 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "fill",
-  "rightColumn": 24,
+  "rightColumn": 22,
   "text": "Alumnos",
   "topRow": 1,
   "type": "BUTTON_WIDGET",
