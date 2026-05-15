@@ -79,7 +79,11 @@ export default {
   canSaveEvaluation() {
     return !!sel_eval_student.selectedOptionValue &&
       !['__empty__', '__loading__'].includes(sel_eval_student.selectedOptionValue) &&
-      !!inp_eval_enfoque.text &&
+      !!sel_eval_objetivo.selectedOptionValue &&
+      !!sel_eval_prioridad_recomposicion.selectedOptionValue &&
+      !!sel_eval_enfoque_principal.selectedOptionValue &&
+      !!sel_eval_enfoque_especifico.selectedOptionValue &&
+      !!sel_eval_debilidad.selectedOptionValue &&
       !!inp_eval_frecuencia.text &&
       !!sel_eval_nivel.selectedOptionValue &&
       this.validEvaluationRows().length > 0 &&
@@ -117,23 +121,26 @@ export default {
     return raw || null;
   },
 
+  noneToNull(value) {
+    return ['ninguno', 'ninguna', '', null, undefined].includes(value) ? null : value;
+  },
+
   routineAutomationPayload() {
-    const student = this.selectedStudent();
     return [
       {
         id_alumno: Number(sel_eval_student.selectedOptionValue),
-        objetivo: this.normalizeObjetivo(student.objetivo || student.enfoque_principal || inp_eval_enfoque.text),
-        prioridad_recomposicion: student.prioridad_recomposicion || null,
-        enfoque_principal: student.enfoque_principal || inp_eval_enfoque.text || null,
-        enfoque_especifico: inp_eval_enfoque.text || student.enfoque_especifico || null,
-        debilidad: student.debilidad || null
+        objetivo: sel_eval_objetivo.selectedOptionValue,
+        prioridad_recomposicion: sel_eval_prioridad_recomposicion.selectedOptionValue,
+        enfoque_principal: sel_eval_enfoque_principal.selectedOptionValue,
+        enfoque_especifico: this.noneToNull(sel_eval_enfoque_especifico.selectedOptionValue),
+        debilidad: this.noneToNull(sel_eval_debilidad.selectedOptionValue)
       }
     ];
   },
 
   async saveEvaluation() {
     if (!this.canSaveEvaluation()) {
-      showAlert('Completa alumno, enfoque, frecuencia, nivel y al menos un ejercicio con peso/reps/RPE/técnica.', 'warning');
+      showAlert('Completa alumno, objetivo, prioridad, enfoque principal, enfoque específico, debilidad, frecuencia, nivel y al menos un ejercicio con peso/reps/RPE/técnica.', 'warning');
       return;
     }
     try {

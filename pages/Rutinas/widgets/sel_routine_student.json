@@ -7,13 +7,10 @@
   "defaultOptionValue": "",
   "dynamicBindingPathList": [
     {
-      "key": "accentColor"
+      "key": "sourceData"
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "sourceData"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -46,6 +43,7 @@
   "minDynamicHeight": 4,
   "minWidth": 450,
   "needsErrorInfo": false,
+  "onDropdownOpen": "{{get_students_lookup.run().then(() => storeValue('rutinas_student_options', get_students_lookup.data || [])).catch((error) => showAlert('Error cargando alumnos: '+ error.message, 'error'));}}",
   "onOptionChange": "{{sel_routine_student.selectedOptionValue && sel_routine_student.selectedOptionValue !== '__empty__' ? get_student_routine.run() : null;}}",
   "optionLabel": "label",
   "optionValue": "value",
@@ -62,6 +60,5 @@
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "w18bdc9354b",
-  "widgetName": "sel_routine_student",
-  "onDropdownOpen": "{{get_students_lookup.run().then(() => storeValue('rutinas_student_options', get_students_lookup.data || [])).catch((error) => showAlert('Error cargando alumnos: '+ error.message, 'error'));}}"
+  "widgetName": "sel_routine_student"
 }

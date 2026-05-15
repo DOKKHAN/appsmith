@@ -6,4 +6,5 @@ SELECT
   COALESCE(NULLIF(rut, ''), 'Sin RUT') AS rut
 FROM adt.alumnos
 WHERE estado_activo = TRUE
+  AND evaluacion_inicial = TRUE
 ORDER BY nombre_completo ASC;

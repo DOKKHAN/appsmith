@@ -1,13 +1,19 @@
 {
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
-  "bottomRow": 55,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 64,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
   "dynamicBindingPathList": [
     {
-      "key": "accentColor"
+      "key": "sourceData"
     },
     {
       "key": "borderRadius"
-    },
+    }
+  ],
+  "dynamicPropertyPathList": [
     {
       "key": "sourceData"
     }
@@ -17,46 +23,39 @@
       "key": "onDropdownOpen"
     }
   ],
-  "isLoading": false,
-  "isVisible": true,
-  "key": "kade626fb83",
-  "leftColumn": 8,
-  "minWidth": 450,
-  "needsErrorInfo": false,
-  "parentColumnSpace": 16,
-  "parentId": "0",
-  "parentRowSpace": 10,
-  "renderMode": "CANVAS",
-  "responsiveBehavior": "fill",
-  "rightColumn": 30,
-  "topRow": 48,
-  "type": "SELECT_WIDGET",
-  "version": 1,
-  "widgetId": "w47d801415d",
-  "widgetName": "sel_eval_exercise_2",
-  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "boxShadow": "none",
-  "defaultOptionValue": "",
-  "dynamicPropertyPathList": [
-    {
-      "key": "sourceData"
-    }
-  ],
   "isDisabled": false,
   "isFilterable": true,
+  "isLoading": false,
   "isRequired": false,
+  "isVisible": true,
+  "key": "kade626fb83",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelText": "Ejercicio",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
+  "leftColumn": 8,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
+  "minWidth": 450,
+  "needsErrorInfo": false,
+  "onDropdownOpen": "{{get_exercises_lookup.run().then(() => storeValue('evaluaciones_exercise_options', get_exercises_lookup.data || [])).catch((error) => showAlert('Error cargando ejercicios: '+ error.message, 'error'));}}",
   "optionLabel": "label",
   "optionValue": "value",
+  "originalBottomRow": 63,
+  "originalTopRow": 56,
+  "parentColumnSpace": 16,
+  "parentId": "0",
+  "parentRowSpace": 10,
   "placeholderText": "Seleccionar",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 30,
   "serverSideFiltering": false,
   "sourceData": "{{(() => { const rows = (get_exercises_lookup.data && get_exercises_lookup.data.length ? get_exercises_lookup.data : (appsmith.store.evaluaciones_exercise_options || [])); if (!rows.length && appsmith.store.evaluaciones_loading) return [{ label: 'Cargando ejercicios...', value: '__loading__' }]; return rows.length ? rows.map((e) => ({ label: e.label || e.nombre || ('Ejercicio #' + (e.value || e.id_ejercicio)), value: e.value || e.id_ejercicio })) : [{ label: 'Sin ejercicios cargados', value: '__empty__' }]; })()}}",
-  "onDropdownOpen": "{{get_exercises_lookup.run().then(() => storeValue('evaluaciones_exercise_options', get_exercises_lookup.data || [])).catch((error) => showAlert('Error cargando ejercicios: '+ error.message, 'error'));}}"
+  "topRow": 57,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "w47d801415d",
+  "widgetName": "sel_eval_exercise_2"
 }
