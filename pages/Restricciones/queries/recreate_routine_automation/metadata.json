@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{{JSON.stringify(Restricciones.routineAutomationPayload())}}",
+      "body": "POST /webhook/routines_automation\nBody: {{JSON.stringify(Restricciones.routineAutomationPayload())}}\n",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {
